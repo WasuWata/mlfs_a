@@ -33,7 +33,6 @@ class HopsworksSettings(BaseSettings):
     KEY_PARAMS_3: str | None = None
     KEY_PARAMS_4: str | None = None
     KEY_PARAMS_5: str | None = None
-    KEY_PARAMS_6: str | None = None
     
     # Other API Keys
     FELDERA_API_KEY: SecretStr | None = None    
@@ -109,10 +108,6 @@ class HopsworksSettings(BaseSettings):
         key_params_5 = self.KEY_PARAMS_5 or os.getenv("KEY_PARAMS_5")
         if not key_params_5:
             missing.append("KEY_PARAMS_5")
-
-        key_params_6 = self.KEY_PARAMS_6 or os.getenv("KEY_PARAMS_6")
-        if not key_params_6:
-            missing.append("KEY_PARAMS_6")
 
         if missing:
             raise ValueError(

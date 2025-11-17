@@ -30,10 +30,11 @@ jobs:
         run: |
           echo "HOPSWORKS_API_KEY=${{ secrets.HOPSWORKS_API_KEY}}">> .env
           echo "AQICN_API_KEY=${{secrets.AQICN_API_KEY}}">> .env
-          echo "AQICN_URL=${{secrets.AQICN_URL}}">> .env
-          echo "AQICN_COUNTRY=${{secrets.AQICN_COUNTRY}}">>.env
-          echo "AQICN_CITY=${{secrets.AQICN_CITY}}">>.env
-          echo "AQICN_STREET=${{secrets.AQICN_STREET}}">>.env
+          echo "KEY_PARAMS_1=${{secrets.KEY_PARAMS_1}}">> .env
+          echo "KEY_PARAMS_2=${{secrets.KEY_PARAMS_2}}">>.env
+          echo "KEY_PARAMS_3=${{secrets.KEY_PARAMS_3}}">>.env
+          echo "KEY_PARAMS_4=${{secrets.KEY_PARAMS_4}}">>.env
+          echo "KEY_PARAMS_5=${{secrets.KEY_PARAMS_5}}">>.env
       - name: execute python workflows from bash script
         env:
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
